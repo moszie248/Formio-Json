@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>FormIQ200</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'>
+    <script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'></script>
+    <!-- <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script> 
+    <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script> -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        window.onload = function() {
+          $.getJSON( 'JsonForm.json', function(JsonForm){
+            Formio.createForm(document.getElementById('formio'), JsonForm);
+          });
+        };
+    </script> 
+  </head>
+  <body>
+      <div id='formio'>
+      </div>
+  </body>
+</html>
